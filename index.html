@@ -4,65 +4,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>قصة راعوث | كرنفال كلك زوق 2026</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #f5f3ee;
   font-family: Tahoma, Arial, sans-serif;
   text-align: center;
+  color: #222;
 }
+
 header {
   background: #142b65;
   color: white;
-  padding: 24px 12px;
+  padding: 28px 15px;
 }
-h1 { margin: 0 0 8px; }
-header p { margin: 0; }
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
 main {
   max-width: 850px;
   margin: 20px auto;
   padding: 0 12px;
 }
+
 .page {
   background: white;
   margin-bottom: 22px;
   padding: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px #0002;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #0002;
 }
+
 .page img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
-footer {
-  padding: 20px;
+
+.download-section {
+  background: white;
+  padding: 30px 15px;
+  margin: 25px 0;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px #0002;
+}
+
+.download-section h2 {
+  color: #142b65;
+  font-size: 23px;
+}
+
+.download-section p {
   color: #555;
+  line-height: 1.8;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #142b65;
+  color: white;
+  padding: 17px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #254ba0;
+  transform: scale(1.03);
+}
+
+footer {
+  background: #142b65;
+  color: white;
+  padding: 22px 12px;
+  font-size: 17px;
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>قصة راعوث</h1>
-<p>كرنفال كلك زوق 2026</p>
-<p>بوابة الزمن</p>
+  <h1>قصة راعوث</h1>
+  <p>كرنفال كلك زوق 2026</p>
+  <p>بوابة الزمن</p>
 </header>
-<main id="pages"></main>
-<footer>قلبك بيان في تصرفاتك</footer>
+
+<main>
+
+  <div id="pages"></div>
+
+  <section class="download-section">
+    <h2>📖 قصة راعوث كاملة</h2>
+
+    <p>
+      تقدر تحتفظ بالقصة على موبايلك
+      وتقرأها في أي وقت حتى من غير إنترنت
+    </p>
+
+    <a
+      class="download-btn"
+      href="ruth_story_2026.pdf"
+      download="قصة_راعوث_2026.pdf">
+      📥 تحميل القصة PDF
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  قلبك بيان في تصرفاتك
+  <p>كرنفال كلك زوق 2026</p>
+</footer>
+
 <script>
 const pages = document.getElementById("pages");
+
 for (let i = 1; i <= 6; i++) {
   const section = document.createElement("section");
   section.className = "page";
+
   const img = document.createElement("img");
   img.src = "images/" + i + ".jpg";
   img.alt = "صفحة " + i + " من قصة راعوث";
   img.loading = i === 1 ? "eager" : "lazy";
+
   section.appendChild(img);
   pages.appendChild(section);
 }
 </script>
+
 </body>
 </html>
